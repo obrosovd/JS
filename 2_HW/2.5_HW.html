@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /* 5. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+переданного значения операции (использовать switch) выполнить одну из арифметических операций
+(использовать функции из задания 4) и вернуть полученное значение.*/
+    'use strict';
+
+    /**
+     * Функция складывает два числа
+     * @param num1 {number} первое число
+     * @param num2 {number} второе число
+     * @returns {number} возвращает сумму двух чисел
+     */
+    function sumNums(num1, num2){ // function declaration
+        return num1 + num2;
+    }
+
+
+    /**
+     * Функция отнимает от первого второе число
+     * @param num1 {number} первое число
+     * @param num2 {number} второе число
+     * @returns {number} возвращает разность двух чисел
+     */
+    function subNums(num1, num2){
+        return num1 - num2;
+    }
+
+
+    /**
+     * Функция умножает первое на второе число
+     * @param num1 {number} первое число
+     * @param num2 {number} второе число
+     * @returns {number} возвращает произведение двух чисел
+     */
+    function mulNums(num1, num2){
+        return num1 * num2;
+    }
+
+
+    /**
+     * Функция делит первое на второе число
+     * @param num1 {number} первое число
+     * @param num2 {number} второе число
+     * @returns {number} возвращает деление двух чисел
+     */
+    function divNums(num1, num2){
+        return num1 / num2;
+    }
+
+
+    /**
+     * функция принимает три значения и возвращает результат в зависимости от переданного оператора
+     * @param arg1 {number} первое число
+     * @param arg2 {number} второе число
+     * @param operation {string} название операции
+     * @returns {number} вернет результат операции
+     */
+    function mathOperation(arg1, arg2, operation){
+        switch (operation){
+            case "sum": // если в параметр operation передадут "sum" то функция выполнит код снизу и прекратит выполнение
+                return sumNums(arg1, arg2); // вернет результат фунцции sumNums
+            case "sub":
+                return subNums(arg1, arg2);
+            case "mul":
+                return mulNums(arg1, arg2);
+            case "sum":
+                return divNums(arg1, arg2);
+        }
+    }
+
+    alert(mathOperation(3, 5, "sum"))
+
+
+</script>
+
+</body>
+</html>
